@@ -10,17 +10,8 @@ metadata:
     - authentication
   annotations:
     backstage.io/tech-stack: "NestJS, JWT, OAuth"
-    backstage.io/https-url: "https://bff-sso.ejemplo.com"
-    backstage.io/api-endpoints: 
-      - endpoint: "/auth"
-        method: "POST"
-        port: 443
-      - endpoint: "/login"
-        method: "POST"
-        port: 443
-      - endpoint: "/signup"
-        method: "POST"
-        port: 443
+    backstage.io/https-url: "https://bff-sso.ejemplo.com:443"
+    backstage.io/api-endpoints: "/auth (POST), /login (POST), /signup (POST)"
 spec:
   type: service
   lifecycle: production
