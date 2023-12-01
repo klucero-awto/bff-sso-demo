@@ -2,11 +2,30 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: bff-sso
-  description: "Microservicio backend desarrollado en NestJS."
+  description: "Microservicio backend desarrollado en NestJS para manejar la autenticación y el registro de usuarios."
   tags:
     - nestjs
     - backend
+    - sso
+    - authentication
+  annotations:
+    backstage.io/tech-stack: "NestJS, JWT, OAuth"
+    backstage.io/https-url: "https://bff-sso.ejemplo.com"
+    backstage.io/api-endpoints: 
+      - endpoint: "/auth"
+        method: "POST"
+        port: 443
+      - endpoint: "/login"
+        method: "POST"
+        port: 443
+      - endpoint: "/signup"
+        method: "POST"
+        port: 443
 spec:
   type: service
   lifecycle: production
   owner: equipo-backend
+  providesApis:
+    - auth-api
+    - login-api
+    - signup-api
