@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bff-sso
+  description: "Microservicio backend desarrollado en NestJS."
+  tags:
+    - nestjs
+    - backend
+spec:
+  type: service
+  lifecycle: production
+  owner: equipo-backend
